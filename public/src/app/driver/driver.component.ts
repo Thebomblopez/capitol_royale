@@ -15,6 +15,7 @@ constructor() {
 }
 
 ngOnInit() {
+    this.nearby = true;
 }
 
 isNearby() {
