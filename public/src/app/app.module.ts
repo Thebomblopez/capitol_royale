@@ -26,6 +26,9 @@ import { RplaylistComponent } from './rplaylist/rplaylist.component';
 import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
 const config : SocketIoConfig = { url: 'http://localhost:3333', options: {}};
 
+import { NgbModule} from '@ng-bootstrap/ng-bootstrap'
+
+
 
 @NgModule({
   declarations: [
@@ -50,6 +53,7 @@ const config : SocketIoConfig = { url: 'http://localhost:3333', options: {}};
     HttpClientModule,
     FormsModule,
     SocketIoModule.forRoot(config),
+    NgbModule
   ],
   providers: [HttpService],
   bootstrap: [AppComponent]

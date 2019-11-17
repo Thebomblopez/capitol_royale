@@ -11,24 +11,22 @@ import { HttpHeaders } from '@angular/common/http';
 
 export class RsearchComponent implements OnInit {
 
-  
-  errors = null
   newQuery = {
     search: "",
   }
 
   constructor(private _httpService: HttpService, private _router: Router) { }
   
-  headerDict = {
-    'Content-Type': 'application/json',
-    'Accept': 'application/json',
-    'Access-Control-Allow-Headers': 'Content-Type; charset=utf-8',
-    'x-api-key' : 'xmN6Ijjcxy1GzOGsOcu1a6EpbSden1c64P3r5bQh'
-  }
+  // headerDict = {
+  //   'Content-Type': 'application/json',
+  //   'Accept': 'application/json',
+  //   'Access-Control-Allow-Headers': 'Content-Type; charset=utf-8',
+  //   'x-api-key' : 'xmN6Ijjcxy1GzOGsOcu1a6EpbSden1c64P3r5bQh'
+  // }
   
-  requestOptions = {                               
-    headers: new Headers(this.headerDict), 
-  };
+  // requestOptions = {                               
+  //   headers: new Headers(this.headerDict), 
+  // };
   
   ngOnInit() {
   }
