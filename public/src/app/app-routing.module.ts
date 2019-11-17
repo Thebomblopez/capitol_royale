@@ -30,7 +30,7 @@ const routes: Routes = [
       {path: '', component: EventsComponent},
       {path: ':id/playing', component: PlayingComponent},
       {path: ':id/playlist', component: PlaylistComponent},
-      {path: ':id/:song/events', component: EventsComponent},
+      {path: ':id/:song/events', component: ReventsComponent},
       {path: ':id/search', component: SearchComponent}, 
     ]
   },
