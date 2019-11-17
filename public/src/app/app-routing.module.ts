@@ -27,6 +27,7 @@ const routes: Routes = [
   {
     path : 'driver', component: DriverComponent,
     children: [
+      {path: '', component: EventsComponent},
       {path: ':id/playing', component: PlayingComponent},
       {path: ':id/playlist', component: PlaylistComponent},
       {path: ':id/:song/events', component: EventsComponent},
@@ -36,6 +37,7 @@ const routes: Routes = [
   {
     path : 'rider', component: RiderComponent,
     children: [
+      {path: '', component: ReventsComponent},
       {path: 'rider/:id',component: RplayingComponent },
       {path: ':id/playing', component: RplayingComponent},
       {path: ':id/playlist', component: RplaylistComponent},
