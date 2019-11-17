@@ -19,7 +19,11 @@
   "homepage": "https://github.com/Thebomblopez/capitol_royale#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "module": "^1.2.5",
     "mongoose": "^5.7.11",
-    "socket.io": "^2.3.0"
+    "node-fetch": "^2.6.0",
+    "request": "^2.88.0",
+    "socket.io": "^2.3.0",
+    "yaml": "^1.7.2"
   }
 }

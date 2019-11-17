@@ -22,6 +22,8 @@ import { ReventsComponent } from './revents/revents.component';
 import { RplayingComponent } from './rplaying/rplaying.component';
 import { RplaylistComponent } from './rplaylist/rplaylist.component';
 
+import { NgbModule} from '@ng-bootstrap/ng-bootstrap'
+
 
 @NgModule({
   declarations: [
@@ -44,7 +46,8 @@ import { RplaylistComponent } from './rplaylist/rplaylist.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgbModule
   ],
   providers: [HttpService],
   bootstrap: [AppComponent]
