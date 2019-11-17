@@ -22,6 +22,10 @@ import { ReventsComponent } from './revents/revents.component';
 import { RplayingComponent } from './rplaying/rplaying.component';
 import { RplaylistComponent } from './rplaylist/rplaylist.component';
 
+// Socket Imports
+import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
+const config : SocketIoConfig = { url: 'http://localhost:3333', options: {}};
+
 
 @NgModule({
   declarations: [
@@ -44,7 +48,8 @@ import { RplaylistComponent } from './rplaylist/rplaylist.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    SocketIoModule.forRoot(config),
   ],
   providers: [HttpService],
   bootstrap: [AppComponent]

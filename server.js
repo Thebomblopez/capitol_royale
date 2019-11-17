@@ -20,6 +20,14 @@ const io = require('socket.io')(server);
 // Socket Events
 io.on("connection", function(socket) {
     
+    //Get Socket ID
+    socket.on("getId", function(){
+        ID = socket.id;
+        socket.emit("hereBro", socket.id);
+        socket.join(socket.id);
+    });
+
+    
 }); 
 
 

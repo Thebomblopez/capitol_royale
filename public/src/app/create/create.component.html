@@ -39,7 +39,7 @@
 
 <body>
 
-  <form class="form-signin">
+  <form (submit)="createRoom()" class="form-signin">
     <div class="checkbox mb-3">
     </div>
     <div class="text-center mb-4">
@@ -47,11 +47,11 @@
     </div>
 
     <div class="form-row">
-      <div class="form-group col-md-6">
+      <!-- <div class="form-group col-md-6">
         <input type="text" class="form-control" name = "fname" placeholder="Car Name">
-      </div>
+      </div> -->
     </div>
-    <button class="btn btn-lg btn-dark btn-block" type="submit">Get Started</button>
+    <button class="btn btn-lg btn-dark btn-block" type="submit">Create Room</button>
   </form>
 </body>
 
