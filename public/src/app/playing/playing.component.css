@@ -9,6 +9,10 @@
 /* box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);*/
 /*}*/
 
+.container {
+    margin-top: 5%;
+}
+
 .titleContainer {
     display: flex;
     align-items: center;
@@ -19,7 +23,20 @@
     font-family: 'Fira Mono', monospace;
     letter-spacing: -7px;
     }
-    
+
+    .rt {
+        transform: rotate(180deg);
+        text-align: center;
+    }
+
+    .oval {
+        width: 360px;
+        height: 200px;
+        background: transparent;
+        transform: rotate(90deg);
+        border-radius: 40px;
+        border: 1px solid white;
+    }
     .title {
     animation: glitch 1s linear infinite;
     }
