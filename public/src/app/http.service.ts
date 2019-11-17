@@ -30,4 +30,8 @@ export class HttpService {
     return this._http.get('/artist/search/', query)
   }
 
+  searchEvents() {
+    return this._http.get('/artist/events/')
+  }
+
 }
