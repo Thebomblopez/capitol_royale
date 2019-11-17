@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -24,4 +24,10 @@ export class HttpService {
     return this._http.delete('/api/playlist/' + id);
     
   }
+
+  searchSongs(query) {
+    console.log(query)
+    return this._http.get('/artist/search/', query)
+  }
+
 }

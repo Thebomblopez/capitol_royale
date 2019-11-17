@@ -12,32 +12,35 @@ import { RsearchComponent } from './rsearch/rsearch.component';
 import { ReventsComponent } from './revents/revents.component';
 import { RplaylistComponent } from './rplaylist/rplaylist.component';
 import { RplayingComponent } from './rplaying/rplaying.component';
+import { RiderComponent } from './rider/rider.component';
 
 
 const routes: Routes = [
   {
     path : '', component: WelcomeComponent,
     children: [
+      {path : '', component: JoinComponent},
       { path: 'create', component: CreateComponent },
       { path: 'join', component: JoinComponent },
     ]
   },
   {
-    path : 'driver/:id', component: DriverComponent,
+    path : 'driver', component: DriverComponent,
     children: [
-      {path: 'driver/:id/playing', component: PlayingComponent},
-      {path: 'driver/:id/playlist', component: PlaylistComponent},
-      {path: 'driver/:id/:song/events', component: EventsComponent},
-      {path: 'driver/:id/search', component: SearchComponent}, 
+      {path: ':id/playing', component: PlayingComponent},
+      {path: ':id/playlist', component: PlaylistComponent},
+      {path: ':id/:song/events', component: EventsComponent},
+      {path: ':id/search', component: SearchComponent}, 
     ]
   },
   {
-    path : 'rider/:id', component: DriverComponent,
+    path : 'rider', component: RiderComponent,
     children: [
-      {path: 'rider/:id/playing', component: RplayingComponent},
-      {path: 'rider/:id/playlist', component: RplaylistComponent},
-      {path: 'rider/:id/:song/events', component: ReventsComponent},
-      {path: 'rider/:id/search', component: RsearchComponent}, 
+      {path: 'rider/:id',component: RplayingComponent },
+      {path: ':id/playing', component: RplayingComponent},
+      {path: ':id/playlist', component: RplaylistComponent},
+      {path: ':id/:song/events', component: ReventsComponent},
+      {path: ':id/search', component: RsearchComponent}, 
     ]
   },
 ];
