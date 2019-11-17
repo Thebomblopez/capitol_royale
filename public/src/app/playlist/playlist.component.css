@@ -1,8 +1,10 @@
 table tr td, table tr th{
   background-color: rgba(210,130,240, 0.0) !important;
-  border-color: rgba(210,130,240, 0.0) !important;
+  /*border-color: rgba(210,130,240, 0.0) !important;*/
+  border-width: 3px;
   color: white;
   font-size: 5vh;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
 .dot {
@@ -16,6 +18,5 @@ table tr td, table tr th{
 
 .card {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  background-color: black;
   width: 100%;
 }

@@ -19,6 +19,7 @@
   "homepage": "https://github.com/Thebomblopez/capitol_royale#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "mdbootstrap": "^4.9.0",
     "module": "^1.2.5",
     "mongoose": "^5.7.11",
     "node-fetch": "^2.6.0",
