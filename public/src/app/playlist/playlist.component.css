@@ -1,0 +1,21 @@
+table tr td, table tr th{
+  background-color: rgba(210,130,240, 0.0) !important;
+  border-color: rgba(210,130,240, 0.0) !important;
+  color: white;
+  font-size: 5vh;
+}
+
+.dot {
+  height: 40px;
+  width: 40px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  position: static;
+}
+
+.card {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  background-color: black;
+  width: 100%;
+}

@@ -19,7 +19,6 @@ export class ReventsComponent implements OnInit {
     this.getEvent()
   }
 
-
   getEvent() {
     let observable = this._httpService.searchEvents();
     observable.subscribe((data: any) => {
