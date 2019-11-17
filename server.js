@@ -105,6 +105,18 @@ const server = app.listen(3333, () => console.log('songs sung on 3333'));
 const io = require('socket.io')(server);
 
 // Socket Events
+io.on("connection", function(socket) {
+    
+    //Get Socket ID
+    socket.on("getId", function(){
+        ID = socket.id;
+        socket.emit("hereBro", socket.id);
+        socket.join(socket.id);
+    });
+
+    
+}); 
+
 io.on("connection", function (socket) {
 
 });

@@ -22,7 +22,12 @@ import { ReventsComponent } from './revents/revents.component';
 import { RplayingComponent } from './rplaying/rplaying.component';
 import { RplaylistComponent } from './rplaylist/rplaylist.component';
 
+// Socket Imports
+import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
+const config : SocketIoConfig = { url: 'http://localhost:3333', options: {}};
+
 import { NgbModule} from '@ng-bootstrap/ng-bootstrap'
+
 
 
 @NgModule({
@@ -47,6 +52,7 @@ import { NgbModule} from '@ng-bootstrap/ng-bootstrap'
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    SocketIoModule.forRoot(config),
     NgbModule
   ],
   providers: [HttpService],

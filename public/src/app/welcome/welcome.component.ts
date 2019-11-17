@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Injectable } from '@angular/core';
+import { Socket } from 'ngx-socket-io';
+
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-welcome',
@@ -7,9 +11,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WelcomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private _socket: Socket,
+    private _router: Router,
+  ) { }
 
   ngOnInit() {
+    this._socket.emit("getNumber");
   }
 
 }
