@@ -46,6 +46,7 @@ export class RsearchComponent implements OnInit {
   }
   let observable = this._httpService.searchSongs(this.newQuery);
   observable.subscribe((data: any) => {
+    console.log(data)
     this.myMethod(data);
   })
 

@@ -42,14 +42,17 @@ app.use(bodyParser.urlencoded({
 
 
 var options = {
-  url: 'https://hackathon.umusic.com/prod/v1/search/tracks?q=pop',
+  url: 'https://hackathon.umusic.com/prod/v1/search/tracks?q=hello',
   headers: {
-    'x-api-key': 'xmN6Ijjcxy1GzOGsOcu1a6EpbSden1c64P3r5bQh'
-  }
+    'x-api-key': 'xmN6Ijjcxy1GzOGsOcu1a6EpbSden1c64P3r5bQh',
+    'Accept': 'text/html, application/xhtml+xml, */*',
+    'Content-Type': 'application/x-www-form-urlencoded',
+    responseType: 'text'
+  },
 };
 
 var bands = {
-  url: 'https://rest.bandsintown.com/artists/snoop/events?app_id=capitol201939ad4ebef3caf1ac2914b0eb8203c030',
+  url: 'https://rest.bandsintown.com/artists/katyperry/events?app_id=capitol201939ad4ebef3caf1ac2914b0eb8203c030',
   headers: {
     'x-api-key': 'nTG4tbSXpIaniCHlJ62q06GzIpROk6qh56EiK7N1',
     'app_id': 'capitol201939ad4ebef3caf1ac2914b0eb8203c030'

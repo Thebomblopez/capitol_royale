@@ -13,6 +13,15 @@ export class ReventsComponent implements OnInit {
     search: "",
   }
 
+  artist = {
+    image : String
+  }
+
+  events = {
+    
+  }
+  venue : any
+
   constructor(private _httpService: HttpService, private _router: Router) { }
 
   ngOnInit() {
@@ -22,8 +31,16 @@ export class ReventsComponent implements OnInit {
   getEvent() {
     let observable = this._httpService.searchEvents();
     observable.subscribe((data: any) => {
-     console.log("Data", data);
-    })
+      
+     let obj = JSON.parse(data);
+     this.showMe(obj)
+     })
+  }
+
+  showMe(objectz){
+    console.log(objectz)
+    this.events = objectz
+    this.artist.image = objectz[0].artist.thumb_url
   }
 
 }
