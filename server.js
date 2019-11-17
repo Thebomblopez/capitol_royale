@@ -41,6 +41,7 @@ var options = {
     }
   };
 
+  // UMG DATA
   function callback(error, response, body) {
       options.url += request
       info = body;
@@ -58,6 +59,8 @@ var options = {
       res.json({ error: e });
     }
   });
+
+  // END OF UMG DATA
 
 app.all('*', (_, res) => res.sendFile(__dirname + '/public/dist/public/index.html'));
 
